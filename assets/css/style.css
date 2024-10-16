@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+section {
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    background: #2F1893;
+}
+
+.container {
+    max-width: 1140px;
+    padding-left: 12px;
+    padding-right: 12px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.menu-icon-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: -0.2926828861236572px;
+    text-align: center;
+
+}
+
+.links {
+    gap: 30px;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    color: white;
+    font-family: "DM Sans", sans-serif;
+}
+
+.padding-30 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+nav {
+    width: 100%;
+
+}
+
+.d-flex {
+    display: flex;
+}
+
+.flex-direction-column {
+    flex-direction: column;
+}
+
+.flex-grow-1 {
+    flex-grow: 1;
+}
+
+.align-item-center {
+    align-items: center;
+}
+
+.justify-item-center {
+    justify-items: center;
+
+}
+
+.color-ffff {
+    color: white;
+}
+
+.heading {
+    font-family: "DM Sans", sans-serif;
+    font-size: 22px;
+    line-height: 32px;
+    text-align: center;
+    color: #FFFFFF;
+    max-width: 607px;
+}
+
+.sign-btn {
+    background: #482BE7;
+    color: #FFFFFF;
+    width: 100px;
+    height: 40px;
+    border-radius: 100px;
+    border: none;
+    cursor: pointer;
+}
+
+.input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 70px;
+    gap: 10px;
+}
+
+input[type=email] {
+    width: 80%;
+    height: 60px;
+    border-radius: 100px;
+    padding-left: 24px;
+    font-family: "DM Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 26px;
+    text-align: left;
+    border: 2px solid #5946a9;
+    background-color: #2F1893;
+    color: white;
+}
+
+.send-btn {
+    padding: 18px 33px;
+    background: #25DAC5;
+    color: #FFFFFF;
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    line-height: 26px;
+    letter-spacing: -0.25px;
+    text-align: center;
+    border-radius: 100px;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.data {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: -0.20000000298023224px;
+    text-align: center;
+    color: #6d5db3;
+    margin-top: 32px;
+}
+
+@media (min-width:576px) {
+    .input-parent {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        margin-top: 70px;
+    }
+
+    input[type=email] {
+        width: 100%;
+    }
+}
+
+@media (max-width:767.98px) {
+    .links {
+        flex-direction: column;
+        justify-content: center;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100%;
+        width: 100%;
+        background-color: #6d5db3;
+        transition: all 200ms linear;
+    }
+
+    label[for="openslider"] {
+        width: 40px;
+        height: 25px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        z-index: 1;
+    }
+
+    label[for="openslider"] span {
+        width: 100%;
+        height: 5px;
+        background-color: white;
+        border-radius: 3px;
+        transition: all 200ms linear;
+    }
+
+    input:checked~.links {
+        right: 0;
+    }
+
+    input:checked~label[for="openslider"] span:first-child {
+        transform: rotate(30deg);
+        transform-origin: left;
+    }
+
+    input:checked~label[for="openslider"] span:last-child {
+        transform: rotate(-30deg);
+        transform-origin: left;
+    }
+
+    input:checked~label[for="openslider"] span:nth-child(2) {
+        transform: translateX(-40px);
+        opacity: 0;
+        visibility: hidden;
+    }
+}
